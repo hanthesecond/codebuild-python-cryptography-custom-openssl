@@ -6,14 +6,15 @@ phases:
             - yum install -y gcc libffi-devel python-devel openssl-devel
             - pip install -U pip virtualenv wheel
             - curl https://sh.rustup.rs -sSf | bash -s -- -y
-            - export PATH=$PATH:$HOME/.cargo/bin
-            - source $HOME/.cargo/env
-            - echo '######'
-            - cat ~/.profile
-            - echo '######'
-            - source ~/.profile 
+            #- export PATH=$PATH:$HOME/.cargo/bin
+            #- source $HOME/.cargo/env
+            - exec bash
+            #- echo '######'
+            #- cat ~/.profile
+            #- echo '######'
+            #- source ~/.profile 
             - echo $PATH
-            - bash
+            #- bash
             - rustc --version
     build:
         commands:
