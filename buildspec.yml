@@ -5,7 +5,7 @@ phases:
         commands:
             - yum install -y gcc libffi-devel python-devel openssl-devel
             - pip install -U pip virtualenv wheel
-            - curl https://sh.rustup.rs -sSf | bash -s -- 1
+            - curl https://sh.rustup.rs -sSf | bash -s -- -y
     build:
         commands:
             - bash build_cryptography_custom_openssl.sh
