@@ -11,4 +11,4 @@ cd openssl-${OPENSSL_VERSION}
 ./config no-shared no-ssl2 -fPIC --prefix=${CWD}/openssl
 make && make install
 cd ..
-CFLAGS="-I${CWD}/openssl/include" LDFLAGS="-L${CWD}/openssl/lib" pip wheel --no-use-wheel cryptography
+CFLAGS="-I${CWD}/openssl/include" LDFLAGS="-L${CWD}/openssl/lib" pip wheel --no-binary cryptography
