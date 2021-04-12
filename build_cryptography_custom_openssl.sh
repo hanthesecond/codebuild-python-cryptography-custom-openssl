@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 CWD=$(pwd)
-virtualenv env -p python$PYTHON_VERSION
+virtualenv env -p py
 . env/bin/activate
 pip install -U setuptools
 pip install -U wheel pip
