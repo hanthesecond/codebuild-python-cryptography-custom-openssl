@@ -8,10 +8,12 @@ phases:
             - curl https://sh.rustup.rs -sSf | bash -s -- -y
             - export PATH=$PATH:$HOME/.cargo/bin
             - source $HOME/.cargo/env
-            - ls -la ~
-            #- source ~/.profile 
-            #- source ~/.bashrc
+            - echo '######'
+            - cat ~/.profile
+            - echo '######'
+            - source ~/.profile 
             - echo $PATH
+            - rustc --version
     build:
         commands:
             - source $HOME/.cargo/env
