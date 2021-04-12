@@ -8,6 +8,9 @@ phases:
             - curl https://sh.rustup.rs -sSf | bash -s -- -y
             - export PATH=$PATH:$HOME/.cargo/bin
             - source $HOME/.cargo/env
+            - ls -la ~
+            #- source ~/.profile 
+            #- source ~/.bashrc
             - echo $PATH
     build:
         commands:
