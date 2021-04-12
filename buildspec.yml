@@ -13,6 +13,7 @@ phases:
             - echo '######'
             - source ~/.profile 
             - echo $PATH
+            - bash
             - rustc --version
     build:
         commands:
