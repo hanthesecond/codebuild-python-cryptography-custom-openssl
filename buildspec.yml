@@ -1,25 +1,14 @@
-version: 0.1
+version: 0.2
 
 phases:
     install:
+        runtime-versions:
+            python: 3.6
         commands:
             - yum install -y gcc libffi-devel python-devel openssl-devel
             - pip install -U pip virtualenv wheel
-            #- curl https://sh.rustup.rs -sSf | bash -s -- -y
-            #- export PATH=$PATH:$HOME/.cargo/bin
-            #- source $HOME/.cargo/env
-            #- exec bash
-            #- echo '######'
-            #- cat ~/.profile
-            #- echo '######'
-            #- source ~/.profile 
-            #- echo $PATH
-            #- bash
-            #- rustc --version
     build:
         commands:
-            #- source $HOME/.cargo/env
-            #- rustc --version
             - bash build_cryptography_custom_openssl.sh
             - mkdir site-packages
             - pip install --target=site-packages --no-index --find-links=`pwd` cryptography
