@@ -22,7 +22,7 @@ phases:
             #- rustc --version
             - bash build_cryptography_custom_openssl.sh
             - mkdir site-packages
-            - pip install --target=site-packages --use-wheel --no-index --find-links=`pwd` cryptography
+            - pip install --target=site-packages --no-index --find-links=`pwd` cryptography
 
 artifacts:
     files:
