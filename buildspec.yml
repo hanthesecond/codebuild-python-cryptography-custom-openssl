@@ -15,7 +15,6 @@ phases:
             - source env/bin/activate
             - pip install snowflake-connector-python==2.4.2 --target=site-packages
             - pip install boto3 --target=site-package
-            - deactivate
             #- pip install --target=site-packages --no-index --find-links=`pwd` cryptography
             #- pip install --target=site-packages pycryptodome
             
