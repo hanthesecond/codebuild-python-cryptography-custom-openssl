@@ -9,10 +9,12 @@ phases:
             - pip install -U pip virtualenv wheel
     build:
         commands:
-            - bash build_cryptography_custom_openssl.sh
+            #- bash build_cryptography_custom_openssl.sh
             - mkdir site-packages
-            - pip install --target=site-packages --no-index --find-links=`pwd` cryptography
-            - pip install --target=site-packages pycryptodome
+            #- pip install --target=site-packages --no-index --find-links=`pwd` cryptography
+            #- pip install --target=site-packages pycryptodome
+            - pip install --target=site-packages -r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.4.2/tested_requirements/requirements_38.reqs
+            - pip install snowflake-connector-python==2.4.2
 artifacts:
     files:
         - site-packages/**/*
